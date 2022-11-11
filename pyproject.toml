@@ -32,6 +32,12 @@ ipykernel = "^6.15.1"
 python-semantic-release = "^7.32.1"
 pytest-helpers-namespace = "^2021.12.29"
 
+[[tool.poetry.source]]
+name = "gcpypi"
+url = "https://europe-west4-python.pkg.dev/jasper-ds-platform/pypi-registry/simple/"
+default = false
+secondary = true
+
 [tool.black]
 line-length = 88
 exclude = '''
