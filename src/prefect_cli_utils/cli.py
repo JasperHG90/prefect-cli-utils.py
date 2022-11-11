@@ -22,7 +22,7 @@ logger_httpx.setLevel(logging.ERROR)
 logger_asyncio.setLevel(logging.ERROR)
 
 app = typer.Typer(
-    help="🧰 Prefect utility CLI functions that can be used to register required infrastructure to run Funda ETL flows.",
+    help="🧰 Prefect utility CLI functions that can be used to register required infrastructure to run flows.",
     no_args_is_help=True,
 )
 app.add_typer(infrastructure.infra, name="infrastructure")
