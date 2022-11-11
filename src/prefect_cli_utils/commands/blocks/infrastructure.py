@@ -46,7 +46,7 @@ def register_block_docker_registry(
         password=password,
         registry_url=registry_url,
     )
-    registry.save(name=name, overwrite=overwrite)
+    registry.save(name=name, overwrite=overwrite)  # type: ignore
     logger.debug("🔥 Finished setting up docker registry")
 
 
@@ -78,5 +78,5 @@ def register_block_docker_container(
         image_pull_policy=image_pull_policy,
         image_registry=registry,
     )
-    container.save(name=name, overwrite=overwrite)
+    container.save(name=name, overwrite=overwrite)  # type: ignore
     logger.debug("🔥 Finished setting up docker container")
