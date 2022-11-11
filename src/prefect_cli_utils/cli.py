@@ -3,8 +3,8 @@ import logging
 import typer
 
 from prefect_cli_utils import __version__
-from prefect_cli_utils.commands import config
-from prefect_cli_utils.steps.example import nchar
+from prefect_cli_utils.commands import flow_run
+from prefect_cli_utils.commands.blocks import credentials, infrastructure
 
 logger = logging.getLogger("prefect_cli_utils")
 handler = logging.StreamHandler()
@@ -13,37 +13,34 @@ handler.setFormatter(format)
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
 
+# Silence these loggers
+logger_hpack = logging.getLogger("hpack")
+logger_httpx = logging.getLogger("httpx")
+logger_asyncio = logging.getLogger("asyncio")
+logger_hpack.setLevel(logging.ERROR)
+logger_httpx.setLevel(logging.ERROR)
+logger_asyncio.setLevel(logging.ERROR)
 
 app = typer.Typer(
-    help="🧰 Example CLI for prefect_cli_utils",
+    help="🧰 Prefect utility CLI functions that can be used to register required infrastructure to run Funda ETL flows.",
     no_args_is_help=True,
 )
-app.add_typer(config.config, name="config")
+app.add_typer(infrastructure.infra, name="infrastructure")
+app.add_typer(credentials.credentials, name="credentials")
+app.add_typer(flow_run.flow_run, name="flow-run")
+
+
+@app.command(
+    short_help="📌 Displays the current version number of the prefect-cli-utils library"
+)
+def version():
+    print(__version__)
 
 
 @app.callback()
 def main(trace: bool = False):
     if trace:
         logger.setLevel(logging.DEBUG)
-
-
-@app.command(
-    short_help="📌 Displays the current version number of the prefect_cli_utils library"
-)
-def version():
-    print(__version__)
-
-
-@app.command(
-    name="prefect_cli_utils",
-    short_help="Prints the number of characters in the input string",
-)
-def pipeline(input_file: str = typer.Argument(help="Path to input file", default=None)):
-    logger.info("Starting pipeline ...")
-    logger.debug(f"Ingesting file {input_file}")
-    result = nchar(input_file)
-    logger.debug(f"File path has {result} characters")
-    logger.info("Finished pipeline ...")
 
 
 def entrypoint():
