@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.2 (2022-11-11)
+### Documentation
+* Update CLI entrypoint desc ([`73d51f4`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/73d51f4dcb5a03c9706031279d96d438541a063e))
+
 ## v0.1.1 (2022-11-11)
 
 
