@@ -2,6 +2,9 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.1 (2022-11-11)
+
+
 ## v0.1.0 (2022-11-11)
 ### Feature
 * Migrate functions to this library ([`1303401`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/1303401f451cd41c9836c0dfb255ee1850775ffa))
