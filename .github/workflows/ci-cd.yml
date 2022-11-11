@@ -36,7 +36,7 @@ jobs:
         run: poetry run isort . --skip notebooks
 
       - name: Unit tests - pytest
-        run: poetry run pytest tests/unit_tests --cov=prefect_cli_utils --cov-report=xml
+        run: poetry run pytest tests --cov=prefect_cli_utils --cov-report=xml
 
       - name: Use Codecov to track coverage
         uses: codecov/codecov-action@v2
