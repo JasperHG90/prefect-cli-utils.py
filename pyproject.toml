@@ -31,6 +31,7 @@ sphinx-rtd-theme = "^1.0.0"
 ipykernel = "^6.15.1"
 python-semantic-release = "^7.32.1"
 pytest-helpers-namespace = "^2021.12.29"
+interrogate = "^1.5.0"
 
 [[tool.poetry.source]]
 name = "gcpypi"
@@ -63,6 +64,31 @@ extend_skip = ["notebooks"]
 [tool.mypy]
 exclude = "^notebooks/"
 ignore_missing_imports = true
+
+[tool.interrogate]
+ignore-init-method = true
+ignore-init-module = true
+ignore-magic = true
+ignore-semiprivate = true
+ignore-private = true
+ignore-property-decorators = true
+ignore-module = true
+ignore-nested-functions = false
+ignore-nested-classes = true
+ignore-setters = true
+fail-under = 10
+exclude = [
+  "setup.py", "docs", "build", "src/prefect_cli_utils/cli.py", "src/prefect_cli_utils/commands"
+]
+ignore-regex = ["^get$", "^mock_.*", ".*BaseClass.*"]
+# possible values: 0 (minimal output), 1 (-v), 2 (-vv)
+verbose = 0
+quiet = false
+whitelist-regex = []
+color = true
+omit-covered-files = false
+#generate-badge = "."
+#badge-format = "svg"
 
 [tool.semantic_release]
 version_variable = [
