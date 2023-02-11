@@ -4,7 +4,7 @@ import typing
 import typer
 from prefect.infrastructure.docker import DockerContainer, DockerRegistry
 
-logger = logging.getLogger("flow_utils.commands.blocks.infrastructure")
+logger = logging.getLogger("prefect_cli_utils.commands.blocks.infrastructure")
 
 infra = typer.Typer(
     help="🏭 Configure prefect infrastructure blocks", no_args_is_help=True

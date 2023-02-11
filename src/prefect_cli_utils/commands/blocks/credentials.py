@@ -5,7 +5,7 @@ import pathlib as plb
 import typer
 from prefect_gcp.credentials import GcpCredentials
 
-logger = logging.getLogger("flow_utils.commands.blocks.credentials")
+logger = logging.getLogger("prefect_cli_utils.commands.blocks.credentials")
 
 credentials = typer.Typer(
     help="🔐 Register prefect credentials block that is used by the Funda ETL flows.",
