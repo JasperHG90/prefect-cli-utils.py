@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2023-02-11)
+### Feature
+* Add task for hashing ([`6c87f5b`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/6c87f5bc14e62410e2b9c2e233271f6071de3c19))
+
+### Build
+* Update dependencies ([`4391d2f`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/4391d2f62403ad776751158ea7593f179d40cc50))
+
+### Fix
+* Logging name ([`300a8b7`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/300a8b75089af0e48fb8cab6477bd66f0707fd9d))
+
 ## v0.2.0 (2023-02-11)
 ### Feature
 * Add property cache block ([`ba9350c`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/ba9350cb70282de00b6a87ebe2aa1781e6a1e235))
