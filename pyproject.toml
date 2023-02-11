@@ -10,7 +10,7 @@ readme = "README.md"
 prefect_cli_utils = "prefect_cli_utils.cli:entrypoint"
 
 [tool.poetry.dependencies]
-python = "^3.8.13"
+python = "^3.8.13,<3.10"
 typer = "^0.6.1"
 pydantic-yaml = {extras = ["pyyaml", "ruamel"], version = "^0.8.1"}
 fastapi = "^0.86.0"
