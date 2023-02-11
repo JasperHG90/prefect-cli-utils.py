@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.0 (2023-02-11)
+### Feature
+* Add property cache block ([`ba9350c`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/ba9350cb70282de00b6a87ebe2aa1781e6a1e235))
+
+### Build
+* Some change ([`dbcc721`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/dbcc721a001fd44380a52e3eb4fbee2ded9b78d9))
+
 ## v0.1.2 (2022-11-11)
 ### Documentation
 * Update CLI entrypoint desc ([`73d51f4`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/73d51f4dcb5a03c9706031279d96d438541a063e))
