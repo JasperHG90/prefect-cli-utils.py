@@ -16,6 +16,7 @@ pydantic-yaml = {extras = ["pyyaml", "ruamel"], version = "^0.8.1"}
 fastapi = "^0.86.0"
 prefect = "^2.6.7"
 prefect-gcp = "^0.1.6"
+google-cloud-aiplatform = "^1.21.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^5.0.4"
