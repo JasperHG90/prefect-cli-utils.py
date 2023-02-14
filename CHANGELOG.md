@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2023-02-14)
+### Feature
+* Add kubernetes job ([`5ce73fe`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/5ce73fea89715126921a9e2c794b65aaf7cdc136))
+
+### Test
+* Fix container test ([`69fead2`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/69fead222fc6dd811d2658917d852c49dd379d31))
+
 ## v0.3.0 (2023-02-11)
 ### Feature
 * Add task for hashing ([`6c87f5b`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/6c87f5bc14e62410e2b9c2e233271f6071de3c19))
