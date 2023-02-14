@@ -53,6 +53,7 @@ def test_register_docker_container(mock_registry, mock_container):
         [
             "this-container-name",
             "myimage:mytag",
+            "--image-pull-policy",
             "ALWAYS",
             "--registry-block-name",
             "this-registry-name",
