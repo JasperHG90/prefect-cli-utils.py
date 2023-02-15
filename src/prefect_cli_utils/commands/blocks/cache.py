@@ -23,8 +23,11 @@ def register_cache(
         None,
         help="Funda URL (without domain and schema) that will be used as a cache for the ETL flow",
     ),
+    overwrite: bool = typer.Option(
+        default=True, help="If set to true, then any existing block will be overwritten"
+    ),
 ):
     logger.debug("Registering block")
     cache = PropertyCache(url=url)
-    cache.register(name=name)
+    cache.save(name=name, overwrite=overwrite)
     logger.debug("🔥 Finished setting up the property cache infrastructure block")
