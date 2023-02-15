@@ -29,5 +29,5 @@ def register_cache(
 ):
     logger.debug("Registering block")
     cache = PropertyCache(url=url)
-    cache.save(name=name, overwrite=overwrite)
+    cache.save(name=name, overwrite=overwrite)  # type: ignore
     logger.debug("🔥 Finished setting up the property cache infrastructure block")
