@@ -4,7 +4,7 @@ import typer
 
 from prefect_cli_utils import __version__
 from prefect_cli_utils.commands import flow_run
-from prefect_cli_utils.commands.blocks import credentials, infrastructure
+from prefect_cli_utils.commands.blocks import cache, credentials, infrastructure
 
 logger = logging.getLogger("prefect_cli_utils")
 handler = logging.StreamHandler()
@@ -28,6 +28,7 @@ app = typer.Typer(
 app.add_typer(infrastructure.infra, name="infrastructure")
 app.add_typer(credentials.credentials, name="credentials")
 app.add_typer(flow_run.flow_run, name="flow-run")
+app.add_typer(cache.cache, name="cache")
 
 
 @app.command(

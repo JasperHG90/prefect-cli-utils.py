@@ -54,7 +54,7 @@ def register_block_docker_registry(
         registry_url=registry_url,
     )
     registry.save(name=name, overwrite=overwrite)  # type: ignore
-    logger.debug("🔥 Finished setting up docker registry")
+    logger.debug("🔥 Finished setting up docker registry infrastructure block")
 
 
 @docker_container.command(
@@ -87,7 +87,7 @@ def register_block_docker_container(
         image_registry=registry,
     )
     container.save(name=name, overwrite=overwrite)  # type: ignore
-    logger.debug("🔥 Finished setting up docker container")
+    logger.debug("🔥 Finished setting up docker container infrastructure block")
 
 
 @kubernetes_job.command(
@@ -139,4 +139,4 @@ def register_kubernetes_job(
         finished_job_ttl=finished_job_ttl,
     )
     job.save(name=name, overwrite=overwrite)  # type: ignore
-    logger.debug("🔥 Finished setting up docker container")
+    logger.debug("🔥 Finished setting up kubernetes job infrastructure block")
