@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v0.5.0 (2023-02-15)
+### Feature
+* Add property cache to cli ([`d91bd7f`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/d91bd7f0d26cd29ab91d65100a12eb676f9b2211))
+
+### Fix
+* Ignore mypy error ([`55b677e`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/55b677efb65165112f3c78abd19be7f730615594))
+* Add overwrite ([`ab5f571`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/ab5f57144319e3774d5f48fdca8e7ddab54c6a5d))
+
 ## v0.4.0 (2023-02-14)
 ### Feature
 * Add kubernetes job ([`5ce73fe`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/5ce73fea89715126921a9e2c794b65aaf7cdc136))
