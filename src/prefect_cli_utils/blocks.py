@@ -1,4 +1,5 @@
 from prefect.blocks.core import Block
+from pydantic import SecretStr
 
 
 class PropertyCache(Block):
@@ -10,5 +11,5 @@ class PropertyCache(Block):
 class GcpHmacCredentials(Block):
     """Used to store HMAC S3-compatible credentials"""
 
-    access_key_id: str
-    secret_access_key: str
+    access_key_id: SecretStr
+    secret_access_key: SecretStr
