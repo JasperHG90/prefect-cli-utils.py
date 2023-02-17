@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.0 (2023-02-17)
+### Feature
+* **blocks:** Added GCP HMAC credentials ([`123eaf2`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/123eaf2c192c0324e14244d01311271d39792d06))
+
+### Fix
+* **blocks:** Turn str -> secret str ([`388b8c9`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/388b8c9e04d06a22353d4d061de7bfd3042128a5))
+
 ## v0.5.0 (2023-02-15)
 ### Feature
 * Add property cache to cli ([`d91bd7f`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/d91bd7f0d26cd29ab91d65100a12eb676f9b2211))
