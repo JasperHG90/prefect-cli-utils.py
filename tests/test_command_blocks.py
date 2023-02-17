@@ -18,7 +18,7 @@ def test_register_credentials(mock_cls):
         with path_to_credentials.open("w") as outFile:
             json.dump(credentials_info, outFile)
         cli_out = runner.invoke(
-            credentials.credentials,
+            credentials.gcp_credentials,
             ["my_credentials", str(path_to_credentials), "my-proj-id", "--overwrite"],
         )
     assert cli_out.exit_code == 0
