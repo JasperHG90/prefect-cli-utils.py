@@ -71,5 +71,5 @@ def register_hmac_credentials(
     block = GcpHmacCredentials(
         access_key_id=access_key_id, secret_access_key=secret_access_key
     )
-    block.save(name=name, overwrite=overwrite)
+    block.save(name=name, overwrite=overwrite)  # type: ignore
     logger.debug("🔥 Finished setting up credentials block")
