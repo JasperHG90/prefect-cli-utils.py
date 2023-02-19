@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.7.1 (2023-02-19)
+### Build
+* **deps:** Update to latest version ([`5d4dd18`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/5d4dd189e6a17ef5706235ce2942941c7d70f30f))
+
 ## v0.7.0 (2023-02-17)
 ### Feature
 * **cli:** Add command for HMAC credentials) ([`e7db383`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/e7db3834ee84598f8ef8303b1ebe9a76291a8c88))
