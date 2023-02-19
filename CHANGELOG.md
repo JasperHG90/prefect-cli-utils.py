@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.7.0 (2023-02-17)
+### Feature
+* **cli:** Add command for HMAC credentials) ([`e7db383`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/e7db3834ee84598f8ef8303b1ebe9a76291a8c88))
+
+### Test
+* **credentials:** Fix GCP credentials test ([`2ae7390`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/2ae73907338f09acee15fb1cece2f6bc5425c4e3))
+
 ## v0.6.0 (2023-02-17)
 ### Feature
 * **blocks:** Added GCP HMAC credentials ([`123eaf2`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/123eaf2c192c0324e14244d01311271d39792d06))
