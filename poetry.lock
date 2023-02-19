@@ -2893,19 +2893,19 @@ dev = ["autoflake8", "cairosvg", "flake8", "flaky", "ipython", "jinja2", "mike",
 
 [[package]]
 name = "prefect-gcp"
-version = "0.1.8"
+version = "0.2.6"
 description = "Prefect tasks and subflows for interacting with Google Cloud Platform."
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "prefect-gcp-0.1.8.tar.gz", hash = "sha256:8d7bb4d6bc3fbbef44c32537e8d9b7d0f62d1272d9107f9d14f562b20fb87af3"},
-    {file = "prefect_gcp-0.1.8-py3-none-any.whl", hash = "sha256:79886d8ed5ac5011c7c643e36c0f80f4d11c81c9aeb028a5a93acf2d476ccfca"},
+    {file = "prefect-gcp-0.2.6.tar.gz", hash = "sha256:b7fdc7d5fd74e44ad400013d66b62703d8b4d35f8cebe15c23c7e88c5f38d4ac"},
+    {file = "prefect_gcp-0.2.6-py3-none-any.whl", hash = "sha256:d90e496779687480d66d430fbea38616a40744f162db0f3eaa683383c9af58a3"},
 ]
 
 [package.dependencies]
 google-api-python-client = ">=2.20.0"
-prefect = ">=2.0.0"
+prefect = ">=2.7.2"
 
 [package.extras]
 aiplatform = ["google-cloud-aiplatform"]
@@ -4937,4 +4937,4 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.13,<3.10"
-content-hash = "a6716a0a9b891cdc33821c9dc7252f741e726f9f23c6d776fb1c207fe1657279"
+content-hash = "a31b011a4b1558454913b9c016b1d67d072e91f2490bc2e95dbbbf4340a4b7c3"
