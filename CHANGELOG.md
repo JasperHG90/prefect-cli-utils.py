@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.8.0 (2023-02-26)
+### Feature
+* **hooks:** Add trigger deployment hook ([`906ded5`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/906ded54fab42fdd993944728d1d94311aaf647d))
+
 ## v0.7.1 (2023-02-19)
 ### Build
 * **deps:** Update to latest version ([`5d4dd18`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/5d4dd189e6a17ef5706235ce2942941c7d70f30f))
