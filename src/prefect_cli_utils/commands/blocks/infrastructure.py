@@ -123,11 +123,40 @@ def register_kubernetes_job(
         default=None,
         help="The number of seconds to retain jobs after completion. If set, finished jobs will be cleaned up by Kubernetes after the given delay. If None (default), jobs will need to be manually removed.",
     ),
+    job_requests_memory: typing.Optional[str] = typer.Option(
+        default="500Mi", help="Amount of memory requested by the job"
+    ),
+    job_requests_cpu: typing.Optional[str] = typer.Option(
+        default="500m", help="Amount of CPU millicores used by the job"
+    ),
+    job_limits_memory: typing.Optional[str] = typer.Option(
+        default="1000Gi",
+        help="Limit on the amount of memory that can be used by the job",
+    ),
+    job_limits_cpu: typing.Optional[str] = typer.Option(
+        default="500Mi",
+        help="Limit on the amount of CPU millicores that can be used by the job",
+    ),
     overwrite: bool = typer.Option(
         default=True, help="If set to true, then any existing block will be overwritten"
     ),
 ):
     logger.debug("Registering block")
+    customizations = (
+        [
+            {
+                "op": "add",
+                "path": "/spec/template/spec/resources",
+                "value": {
+                    "limits": {"memory": job_limits_memory, "cpu": job_limits_cpu},
+                    "requests": {
+                        "memory": job_requests_memory,
+                        "cpu": job_requests_cpu,
+                    },
+                },
+            }
+        ],
+    )
     job = KubernetesJob(
         image=image,
         # job=KubernetesJob.job_from_file("./k8s_flow_run_job_manifest.yaml"),
@@ -137,6 +166,7 @@ def register_kubernetes_job(
         job_watch_timeout_seconds=job_watch_timeout_seconds,
         pod_watch_timeout_seconds=pod_watch_timeout_seconds,
         finished_job_ttl=finished_job_ttl,
+        customizations=customizations,
     )
     job.save(name=name, overwrite=overwrite)  # type: ignore
     logger.debug("🔥 Finished setting up the kubernetes job infrastructure block")
