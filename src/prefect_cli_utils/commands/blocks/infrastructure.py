@@ -141,22 +141,22 @@ def register_kubernetes_job(
         default=True, help="If set to true, then any existing block will be overwritten"
     ),
 ):
+
     logger.debug("Registering block")
-    customizations = (
-        [
-            {
-                "op": "add",
-                "path": "/spec/template/spec/resources",
-                "value": {
-                    "limits": {"memory": job_limits_memory, "cpu": job_limits_cpu},
-                    "requests": {
-                        "memory": job_requests_memory,
-                        "cpu": job_requests_cpu,
-                    },
-                },
-            }
-        ],
-    )
+    customizations = [
+        {
+            "op": "add",
+            "path": "/spec/template/spec/resources",
+            "value": {"limits": {"memory": job_limits_memory, "cpu": job_limits_cpu}},
+        },
+        {
+            "op": "add",
+            "path": "/spec/template/spec/resources",
+            "value": {
+                "requests": {"memory": job_requests_memory, "cpu": job_requests_cpu}
+            },
+        },
+    ]
     job = KubernetesJob(
         image=image,
         # job=KubernetesJob.job_from_file("./k8s_flow_run_job_manifest.yaml"),
