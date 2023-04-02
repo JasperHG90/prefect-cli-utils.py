@@ -137,6 +137,10 @@ def register_kubernetes_job(
         default="500Mi",
         help="Limit on the amount of CPU millicores that can be used by the job",
     ),
+    job_node_selector_agent_pool: typing.Optional[str] = typer.Option(
+        default="default",
+        help="The agent pool to use for the job. Defaults to 'default'. View available agent pools by executing 'kubectl get nodes -L agentpool'",
+    ),
     overwrite: bool = typer.Option(
         default=True, help="If set to true, then any existing block will be overwritten"
     ),
@@ -155,6 +159,11 @@ def register_kubernetes_job(
             "value": {
                 "requests": {"memory": job_requests_memory, "cpu": job_requests_cpu}
             },
+        },
+        {
+            "op": "add",
+            "path": "/spec/template/spec/nodeSelector",
+            "value": {"agentpool": job_node_selector_agent_pool},
         },
     ]
     job = KubernetesJob(
