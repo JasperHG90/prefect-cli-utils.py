@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.9.1 (2023-03-11)
+### Fix
+* **kubernetes:** Requests & limits ([`c066adb`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/c066adb410a1301788abb96014096a80041dbf08))
+
 ## v0.9.0 (2023-03-02)
 ### Feature
 * **k8s:** Add job limits and requests to k8s manifest ([`df702c0`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/df702c0acad17b8d652cadddfa4cf931f88583d5))
