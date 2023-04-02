@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.9.2 (2023-04-02)
+### Fix
+* **infrastructure:** Add node selector ([`405cf3d`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/405cf3d988ffe2599bf5794671c0e32d16d9b02d))
+
 ## v0.9.1 (2023-03-11)
 ### Fix
 * **kubernetes:** Requests & limits ([`c066adb`](https://github.com/JasperHG90/prefect-cli-utils.py/commit/c066adb410a1301788abb96014096a80041dbf08))
